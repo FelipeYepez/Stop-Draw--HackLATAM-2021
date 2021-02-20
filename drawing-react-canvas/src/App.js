@@ -7,16 +7,16 @@ function App() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
+    canvas.width = window.innerWidth *0.5;
+    canvas.height = window.innerHeight *0.5;
+    canvas.style.width = `${window.innerWidth *0.5}px`;
+    canvas.style.height = `${window.innerHeight *0.5}px`;
 
     const context = canvas.getContext("2d")
-    context.scale(2,2)
+    //context.scale(1,1)
     context.lineCap = "round"
     context.strokeStyle = "black"
-    context.lineWidth = 5
+    context.lineWidth = 3
     contextRef.current = context;
   }, [])
   
@@ -41,12 +41,14 @@ function App() {
     contextRef.current.stroke()
   }
   return (
-    <canvas
-      onMouseDown = {startDrawing}
-      onMouseUp = {finishDrawing}
-      onMouseMove = {draw}
-      ref = {canvasRef}
-    />
+    <p >
+      <canvas id="canvas"  class="center-block"
+        onMouseDown = {startDrawing}
+        onMouseUp = {finishDrawing}
+        onMouseMove = {draw}
+        ref = {canvasRef}
+      />
+    </p>  
   );
 }
 
