@@ -12,26 +12,50 @@ h1 {
     text-align: left;
 }
 
+h3{
+    color: rgb(182, 144, 7);
+    display: inline;
+    text-align: left;
+}
+
+.contador{
+    position: absolute;
+    bottom: 15px;
+    right: 80px;
+    align-items: initial;
+    color:rgb(182, 144, 7);
+}
+
+.butcontador{
+    position: absolute;
+    bottom: 15px;
+    right: 180px;
+    align-items: initial;
+}
+
 .title {
     display: inline;
-    padding-left: 10%;
-    color: rgb(255, 255, 255)36, 57, 57);
+    padding-left: 8%;
+    color: rgb(255, 255, 255);
 }
 
 .color-picker-container {
     text-align: center;
     display: inline;
     color: white;
-    padding-left: 15%;
+    padding-left: 5%;
 }
 
 .brushsize-container {
     display: inline;
     color: white;
-    margin-left: 12px;
     padding-left: 5%;
 }
 
+.seconds{
+    display: inline;
+    padding-left: 5%;
+}
 
 .button-section {
     position: absolute;
