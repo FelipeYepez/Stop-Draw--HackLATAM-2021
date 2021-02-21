@@ -8,6 +8,7 @@ class Board extends React.Component {
     limit;
     socket = io.connect("http://localhost:5000");
 
+    root;
     ctx;
     isDrawing = false;
 
@@ -24,6 +25,7 @@ class Board extends React.Component {
                 var image = new Image();
                 var canvas = document.querySelector('#board');
                 var ctx = canvas.getContext('2d');
+                
                 image.onload = function() {
                     ctx.drawImage(image, 0, 0);
 
@@ -88,20 +90,29 @@ class Board extends React.Component {
             ctx.closePath();
             ctx.stroke();
 
+            
+/*
             if(root.limit != undefined) clearTimeout(root.limit);
             root.limit = setTimeout(function(){
                 var base64ImageData = canvas.toDataURL("image/png");
                 root.socket.emit("canvas-data", base64ImageData);
-            }, 1000)
+            }, 1000)*/
         };
+    }
+
+    sendDraw = event =>{
+        var canvas = document.querySelector('#board');
+        var base64ImageData = canvas.toDataURL("image/png");
+        var root = this;
+        root.socket.emit("canvas-data", base64ImageData);
     }
 
     render() {
         return (
-            <div class="sketch" id="sketch">
+            <div className="sketch" id="sketch">
                 <canvas className="board" id="board"></canvas>
-            </div>
-            
+                <button className="button" id = "send" onClick={this.sendDraw}>DRAW2!</button>
+            </div>   
         )
     }
 }

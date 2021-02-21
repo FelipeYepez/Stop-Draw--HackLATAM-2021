@@ -22,7 +22,7 @@ h1 {
     text-align: center;
     display: inline;
     color: white;
-    padding-left: 35%;
+    padding-left: 15%;
 }
 
 .brushsize-container {
@@ -32,9 +32,12 @@ h1 {
     padding-left: 5%;
 }
 
+
 .button-section {
-    padding-left: 5%;
-    display: inline;
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
+    align-items: initial;
 }
 
 .tools {
@@ -44,7 +47,7 @@ h1 {
 
 .board-container {
     width: 90%;
-    height: 90%;
+    height: 80%;
     margin: auto;
     margin-top: 1%;
     background: #e0e0e0;

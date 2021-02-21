@@ -30,7 +30,7 @@ class Container extends React.Component
 
         return (
             <div className="container">
-                <div class="tool">
+                <div className="tool">
                     <div className="title">
                         <h1>Stop-Draw</h1>
                     </div>
@@ -52,16 +52,14 @@ class Container extends React.Component
                         </select>
                     </div>
 
-                    <div className="button-section">
-                        <button class = "button">DRAW2!</button>
-                    </div>
+                    
 
                 </div>
 
-                <div class="board-container">
+                <div className="board-container">
                     <Board color={this.state.color} size={this.state.size}></Board>
                 </div>
-
+                
                 
             </div>
         )
