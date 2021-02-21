@@ -7,8 +7,8 @@ body {
     background-image: url("https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg");
   }
   canvas {
-    /*vertical-align: baseline;*/
-    background-color: #61dafb;
+    vertical-align: baseline;
+    background-color:#fafaec;
   }
   .center-block {
     display: block;
@@ -16,11 +16,15 @@ body {
     margin-left: auto;
   }
   #canvas {
-    border: 3px dashed black;
+    border: 3px solid black;
     cursor: default;
   }
   div{
     /*vertical-align: baseline;*/
     margin-right: auto;
     margin-left: auto;
+  }
+
+  h1{
+      text-align: center;
   }
