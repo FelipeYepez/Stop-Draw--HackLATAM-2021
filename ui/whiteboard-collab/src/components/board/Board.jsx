@@ -108,8 +108,10 @@ class Board extends React.Component {
     }
 
     conteo = event =>{
-        document.querySelector('#cont').innerHTML += "✓";
-          
+        document.querySelector('#cont').innerHTML += "✓";  
+    }
+    conteomal = event =>{
+        document.querySelector('#cont').innerHTML += "X";  
     }
 
     render() {
@@ -117,7 +119,8 @@ class Board extends React.Component {
             <div className="sketch" id="sketch">
                 <canvas className="board" id="board"></canvas>
                 <button className="button" id = "send" onClick={this.sendDraw}>DRAW!</button>
-                <button id="aci" className="butcontador" onClick={this.conteo}> Aciertos</button>
+                <button id="aci" className="butcontador" onClick={this.conteo}> Correcto</button>
+                <button id="inc" className="buterror" onClick={this.conteomal}> Incorrecto</button>
                 <p id="cont" className="contador"></p>
             </div>   
         )

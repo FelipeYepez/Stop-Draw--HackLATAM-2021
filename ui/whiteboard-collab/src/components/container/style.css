@@ -22,15 +22,21 @@ h3{
     position: absolute;
     bottom: 15px;
     right: 80px;
+    font-size: 28px;
     align-items: initial;
     color:rgb(182, 144, 7);
 }
 
 .butcontador{
-    position: absolute;
-    bottom: 15px;
-    right: 180px;
-    align-items: initial;
+    font-size: 28px;
+    background-color: green;
+    color: rgb(0, 0, 0);
+}
+
+.buterror{
+    font-size: 28px;
+    background-color: red;
+    color: rgb(0, 0, 0);
 }
 
 .title {
